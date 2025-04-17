@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import logo from './images/logo.png';
+import bestmontemeubles6 from './images/bestmontemeubles6.png';
+import bestmontemeubles5 from './images/bestmontemeubles5.png';
 import { Phone, Mail, MapPin, Star, ArrowRight, Menu, ShieldCheck, ThumbsUp } from 'lucide-react';
 
 function App() {
@@ -57,7 +59,7 @@ function App() {
       <header className="relative pt-16 h-screen">
         <div className="absolute inset-0">
           <img 
-            src="src/images/bestmontemeubles5.png"
+            src={bestmontemeubles5}
             alt="Monte-meuble en action"
             className="w-full h-full object-cover"
           />
@@ -102,7 +104,7 @@ function App() {
             </div>
             <div className="relative left-20">
               <img 
-                src="src/images/bestmontemeubles6.png"
+                src={bestmontemeubles6}
                 alt="Équipe Best Monte Meuble"
                 className="rounded-lg shadow-2xl"
               />
