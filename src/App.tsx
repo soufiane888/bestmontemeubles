@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import logo from './images/logo.png';
 import bestmontemeubles6 from './images/bestmontemeubles6.png';
 import bestmontemeubles5 from './images/bestmontemeubles5.png';
-import { Phone, Mail, MapPin, Star, ArrowRight, Menu, ShieldCheck, ThumbsUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, ArrowRight, Menu, ShieldCheck, ThumbsUp, X} from 'lucide-react';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     nom: '',
     email: '',
@@ -23,6 +24,13 @@ function App() {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -48,10 +56,32 @@ function App() {
                 0750068342
               </a>
             </div>
-            <div className="md:hidden">
-              <Menu className="w-6 h-6 text-gray-600" />
+            <button 
+              onClick={toggleMenu}
+              className="md:hidden focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-gray-600" />
+              ) : (
+                <Menu className="w-6 h-6 text-gray-600" />
+              )}
+            </button>
             </div>
+            </div>
+            {/* Menu mobile */}
+        <div className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+        <div className="px-4 py-3 space-y-3">
+            <a href="#" onClick={closeMenu} className="block text-gray-600 hover:text-blue-600 py-2">Accueil</a>
+            <a href="#about" onClick={closeMenu} className="block text-gray-600 hover:text-blue-600 py-2">Qui sommes-nous</a>
+            <a href="#services" onClick={closeMenu} className="block text-gray-600 hover:text-blue-600 py-2">Pourquoi nous choisir</a>
+            <a href="#blog" onClick={closeMenu} className="block text-gray-600 hover:text-blue-600 py-2">Blog</a>
+            <a href="#testimonials" onClick={closeMenu} className="block text-gray-600 hover:text-blue-600 py-2">Témoignages</a>
+            <a href="#contact" onClick={closeMenu} className="block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-green-700 text-center">
+              Devis gratuit
+            </a>
           </div>
+         
         </div>
       </nav>
 
