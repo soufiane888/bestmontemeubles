@@ -52,8 +52,12 @@ function App() {
               <a href="#contact" className="text-gray-600 hover:text-blue-600">
                 Contact
               </a>
-              <a href="#contact" className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-                0750068342
+              
+              <a href="#contact" className="px-2 pb-1 bg-green-500 text-blue  rounded-md hover:bg-yellow-400">
+                <div className=" rounded-lg flex items-center justify-center">
+                    <Phone className=" w-5 h-5 mr-2 text-red-600" />
+                    0750068342
+                  </div>
               </a>
             </div>
             <button 
