@@ -280,8 +280,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-gray-900">Demandez un devis gratuit</h2>
-              <div className="w-20 h-1 bg-red-600 mb-8"></div>
+              <h2 className="text-4xl font-bold mb-6 text-center text-gray-900">Demandez un devis gratuit</h2>
+              <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
               <p className="text-lg text-gray-600 mb-8">
                 Contactez-nous pour obtenir un devis personnalisé pour vos besoins de déménagement vertical.
                 Notre équipe vous répondra dans les plus brefs délais.
@@ -317,7 +317,7 @@ function App() {
               </div>
             </div>
             <div>
-              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg space-y-6">
+              <form onSubmit={handleSubmit} className="bg-gray-100 p-8 rounded-lg shadow-lg space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="nom" className="block text-sm font-medium text-gray-700">Nom</label>
